@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kaisei+HarunoUmi&family=Madimi+One&family=Vast+Shadow&display=swap');
+
+html
+ {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  background: white;
+  font-family: "Inter", sans-serif;
+}
+.heading {
+  margin-left: 40vw;
+}
+.navbar{
+display: flex;
+flex-direction: row;  
+align-items: center;
+justify-content: center;
+border-radius: 20px;
+position: top;
+margin-left : 20vw;
+margin-bottom: 40px;
+}
+.navbar ul{
+  display: flex;
+ flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(242, 242, 242, 1);   
+  width:  60vw;
+  border-radius: 20px;
+  list-style-type: none;
+  font-size: 2rem;
+  padding : 0 ;
+  margin-left:2%;
+  margin-right: 2%;
+}
+
+.navbar li {
+  display: flex;
+ flex-direction: row;
+  justify-content: space-around;
+  margin :0;
+  background-color: rgba(242, 242, 242, 1);  
+  padding: 2%;
+  
+
+}
+.navbar li:hover {
+  cursor: pointer;
+  
+}
+
+.container .item-grid{
+ display: grid;
+ grid-template-columns:repeat(4 , 1fr) ;
+ grid-template-rows: repeat(1, 1fr);
+ column-gap: 40px;
+ margin: 40px;
+ 
+
+}
+.item-grid {
+  opacity: 0;
+  transition: opacity 0.4s ease ;
+}
+.item-grid.loaded {
+  opacity: 1; 
+}
+.card img {
+  width: 200px; /* Adjust the width as needed */
+  height: 250px; /* Maintain aspect ratio */
+  border-radius: 15px;
+  
+}
+
+button {
+  background-color: black;
+  color: white;
+  width: max-content;
+  padding: 4%;
+  border-radius: 10%;
+}
+button:hover{
+  cursor: pointer;
+  background-color: cadetblue;
+  color: black;
+}
