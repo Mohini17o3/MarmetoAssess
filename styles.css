@@ -95,7 +95,7 @@ margin-bottom: 40px;
 button {
   background-color: black;
   color: white;
-  width: max-content;
+  width: 180px;
   padding: 4%;
   border-radius: 10%;
 }
