@@ -71,13 +71,26 @@ margin-bottom: 40px;
   opacity: 0;
   transition: opacity 0.4s ease ;
 }
+.card {
+  position: relative;
+}
 
 .card img {
   width: 200px; 
   height: 250px; 
   border-radius: 15px;
-  
 }
+.badge {
+  color: black;
+  background-color: white;
+  width: fit-content;
+  padding: 1%;
+  border-radius: 7px;
+  position: absolute;
+    top: 10px; 
+    left: 10px;
+}
+
 
 button {
   background-color: black;

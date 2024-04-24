@@ -47,15 +47,19 @@ function fetchData() {
  
     products.forEach(product => {
      const actualPrice= product.price; 
-     const comparePrice= product.compare_at_price; 
+     const comparePrice= product.compare_at_price;
+     let badge = product.badge_text; 
+    
      const discount = Math.floor (((comparePrice - actualPrice) / comparePrice) * 100 );      
       const card = document.createElement("div");
         card.classList.add("card");
  
         card.innerHTML = `
-            <img src="${product.image}" alt="${product.title}">
+         <div>  <img src="${product.image}" alt="${product.title}"> ${badge ? `<div class="badge">${badge}</div>` : ''}
+        </div>   
+       
             <p><span style="font-size: 1.2rem; font-weight: 800;">${product.title}  </span> ⚫ ${product.vendor}</p>
-            <p>Rs ${product.price}   <span style= "text-decoration : line-through ; color :grey ;"> ${product.compare_at_price} </span>  <span style ="color : red;"> ${discount} % </span></p>
+            <p>Rs ${product.price}   <span style= "text-decoration : line-through ; color :grey ;"> ${product.compare_at_price} </span>  <span style ="color : red;"> ${discount} % Off </span></p>
          
             <button> Add to cart</button>
         `;
