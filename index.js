@@ -18,7 +18,7 @@ function fetchData() {
                 const listItem = document.querySelector(`li[data-category="${categoryName}"]`);
  
  
-               listItem.addEventListener("click", (event) => {
+               listItem.addEventListener("click", () => {
                     displayCards(categoryProducts);
                  document.querySelectorAll(".navbar li").forEach(item => {
  
